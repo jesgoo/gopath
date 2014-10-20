@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 60
+.classpath
+.myeclipse
+.mymetadata
+.project
+.settings
+target
+
+END

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+
+	<!--***************************************************	-->
+	<!--spring 部分	-->
+	<!--***************************************************	-->
+
+	<!--自动扫描根路径下的所有类，根据spring的注解获取bean	-->
+	<context:component-scan base-package="org.dong" />
+
+	<!-- hibernate的配置文件 -->
+	<bean id="jdbcPropertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath*:config/hibernate-config.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- c3p0 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="initialPoolSize" value="${jdbc.initialPoolSize}" />
+		<property name="minPoolSize" value="${jdbc.minPoolSize}" />
+		<property name="maxPoolSize" value="${jdbc.maxPoolSize}" />
+		<property name="idleConnectionTestPeriod" value="${jdbc.idleConnectionTestPeriod}" />
+		<property name="maxIdleTime" value="${jdbc.maxIdleTime}" />
+	</bean>
+
+	<!--配置hibernate-->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+
+		<!--添加数据源-->
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<!--设置hibernate-->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				<prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+				<prop key="hibernate.jdbc.fetch_size">${hibernate.jdbc.fetch_size}</prop>
+
+				<!--二级缓存-->
+				<prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+				<prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+
+				<!--hibernate.hbm2ddl.auto这个是hibernate根据配置文件创建数据库相应的表-->
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+			</props>
+		</property>
+
+		<!--配置扫描的根路径-->
+		<property name="packagesToScan">
+			<list>
+				<value>${project.package.root}</value>
+			</list>
+		</property>
+
+	</bean>
+
+	<!-- 开启注解事务 只对当前配置文件有效 -->
+	<tx:annotation-driven transaction-manager="txManager" />
+
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+
+
+	<!--***************************************************	-->
+	<!--spring MVC 部分	-->
+	<!--***************************************************	-->
+	
+	<!--解决@ResponseBody的乱码问题，需要放在<annotation-driven />之前	-->
+	<bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<bean
+					class="org.springframework.http.converter.StringHttpMessageConverter">
+					<property name="supportedMediaTypes">
+						<list>
+							<value>text/html;charset=UTF-8</value>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<!--spring自动配置注解需要的bean	-->
+	<mvc:annotation-driven />
+
+	<!-- 允许对静态资源文件的访问 -->
+	<mvc:default-servlet-handler />
+
+	<!--view视图的配置，设置了前缀和后缀，所有controller中直接写jsp的名称就可以了	-->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/classes/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<!--拦截器，多个拦截器,顺序执行	-->
+	<mvc:interceptors>
+	    <!-- 登录验证拦截器 -->  
+     	<bean class="org.dong.proto.webapp.core.PermissionInterceptor"></bean>  
+	
+		<!--解决hibernate延迟加载问题	-->
+		<bean id="openSessionInViewInterceptor"
+	          class="org.springframework.orm.hibernate3.support.OpenSessionInViewInterceptor">
+	        <property name="sessionFactory" ref="sessionFactory"/>
+	    </bean>
+           
+	</mvc:interceptors>	
+	
+		
+	<!-- 总错误处理-->
+	<bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="defaultErrorView">  
+		 	<value>forward:/page/common/prompt.jsp</value>
+		</property>
+		<property name="defaultStatusCode">  
+		 	<value>200</value>
+		</property>		 	
+		<property name="warnLogCategory">  
+		 	<value>org.springframework.web.servlet.handler.SimpleMappingExceptionResolver</value>
+		</property>		 	
+		
+	</bean> 
+	
+	<!-- 直接视图访问配置-->
+	<mvc:view-controller path="back/login" view-name="back/login" />  
+	
+	
+</beans>

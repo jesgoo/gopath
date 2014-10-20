@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/25/trunk/proto/proto-util/src/main/java/org/dong/proto/util/file
+END
+FileUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/25/trunk/proto/proto-util/src/main/java/org/dong/proto/util/file/FileUtil.java
+END
+ReadFromFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/25/trunk/proto/proto-util/src/main/java/org/dong/proto/util/file/ReadFromFile.java
+END
+ZipToFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/25/trunk/proto/proto-util/src/main/java/org/dong/proto/util/file/ZipToFile.java
+END
+FtpUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/25/trunk/proto/proto-util/src/main/java/org/dong/proto/util/file/FtpUtil.java
+END
+AppendToFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/25/trunk/proto/proto-util/src/main/java/org/dong/proto/util/file/AppendToFile.java
+END
+ZToFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/25/trunk/proto/proto-util/src/main/java/org/dong/proto/util/file/ZToFile.java
+END

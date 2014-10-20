@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- 配置控制台输出器 生产时注释  -->
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<!-- encoding单元测试的时候，控制台不是乱码  -->
+<!--		<param name="encoding" value="UTF-8" />-->
+		<param name="threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p - %m%n" />
+		</layout>
+	</appender>
+	<!-- 配置全局日志 -->
+	<appender name="DAILY" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="encoding" value="UTF-8" />
+		<param name="file" value="/opt/app/WebSphere/output/protolog/proto.log" />
+		<param name="threshold" value="info" />
+		<param name="append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p - %m%n" />
+		</layout>
+	</appender>
+	<root>
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="DAILY" />
+	</root>
+</log4j:configuration>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/25/trunk/proto/proto-modules/proto-modules-permission/src/main/resources/views/resource/common
+END
+update.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/25/trunk/proto/proto-modules/proto-modules-permission/src/main/resources/views/resource/common/update.jsp
+END
+delete.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/25/trunk/proto/proto-modules/proto-modules-permission/src/main/resources/views/resource/common/delete.jsp
+END
+manage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/25/trunk/proto/proto-modules/proto-modules-permission/src/main/resources/views/resource/common/manage.jsp
+END
+add.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/25/trunk/proto/proto-modules/proto-modules-permission/src/main/resources/views/resource/common/add.jsp
+END

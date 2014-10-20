@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/45/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/department
+END
+Department.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/!svn/ver/42/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/department/Department.java
+END
+DepartmentService.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/!svn/ver/25/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/department/DepartmentService.java
+END
+DepartmentServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/!svn/ver/39/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/department/DepartmentServiceImpl.java
+END
+DepartmentController.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/!svn/ver/45/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/department/DepartmentController.java
+END
+DepartmentVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/!svn/ver/39/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/department/DepartmentVO.java
+END

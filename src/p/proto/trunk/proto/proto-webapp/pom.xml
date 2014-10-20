@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  	<!-- 父模块信息 -->
+	<parent>
+	  <artifactId>proto</artifactId>
+	  <groupId>org.dong.proto</groupId>
+	  <version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<!--模块信息	-->
+	<groupId>org.dong.proto</groupId>
+	<artifactId>proto-webapp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>proto-webapp</name>
+	
+	<!--常量	-->
+	<properties>
+	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<!--war的构建路径，很重要，如果不加，resources下的配置文件找不到-->
+	<build>
+		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
+	</build>
+	
+	<!--依赖	-->
+	<dependencies>
+		<!--模块依赖		-->
+		<dependency>
+			<groupId>org.dong.proto</groupId>
+			<artifactId>proto-modules-permission</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	
+		<!-- Servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/42/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/permission
+END
+Permission.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/!svn/ver/42/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/permission/Permission.java
+END
+PermissionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/!svn/ver/25/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/permission/PermissionService.java
+END
+PermissionServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/!svn/ver/39/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/permission/PermissionServiceImpl.java
+END
+PermissionController.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/!svn/ver/25/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/permission/PermissionController.java
+END
+PermissionVO.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/!svn/ver/25/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/permission/PermissionVO.java
+END

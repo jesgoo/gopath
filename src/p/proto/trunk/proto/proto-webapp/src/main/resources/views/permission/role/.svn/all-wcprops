@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/47/trunk/proto/proto-webapp/src/main/resources/views/permission/role
+END
+role-update.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/44/trunk/proto/proto-webapp/src/main/resources/views/permission/role/role-update.jsp
+END
+role-delete.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/44/trunk/proto/proto-webapp/src/main/resources/views/permission/role/role-delete.jsp
+END
+permission-common-add.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/44/trunk/proto/proto-webapp/src/main/resources/views/permission/role/permission-common-add.jsp
+END
+role-manage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/44/trunk/proto/proto-webapp/src/main/resources/views/permission/role/role-manage.jsp
+END
+role-add.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/44/trunk/proto/proto-webapp/src/main/resources/views/permission/role/role-add.jsp
+END
+permission-delete.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/44/trunk/proto/proto-webapp/src/main/resources/views/permission/role/permission-delete.jsp
+END
+permission-menu-update.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/47/trunk/proto/proto-webapp/src/main/resources/views/permission/role/permission-menu-update.jsp
+END
+permission-manage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/44/trunk/proto/proto-webapp/src/main/resources/views/permission/role/permission-manage.jsp
+END

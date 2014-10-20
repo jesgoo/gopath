@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/25/trunk/proto/proto-core/src/main/java/org/dong/proto/core/persistence/query
+END
+QueryCondition.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/25/trunk/proto/proto-core/src/main/java/org/dong/proto/core/persistence/query/QueryCondition.java
+END
+ResultToBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/25/trunk/proto/proto-core/src/main/java/org/dong/proto/core/persistence/query/ResultToBean.java
+END

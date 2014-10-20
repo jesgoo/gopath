@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/46/trunk/proto/proto-core/src/main/resources
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/25/trunk/proto/proto-core/src/main/resources/log4j.xml
+END
+ehcache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/39/trunk/proto/proto-core/src/main/resources/ehcache.xml
+END

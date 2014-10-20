@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/39/trunk/proto/proto-modules/proto-modules-permission/src/main/resources/views/department
+END
+delete_node.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/39/trunk/proto/proto-modules/proto-modules-permission/src/main/resources/views/department/delete_node.jsp
+END
+update_node.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/39/trunk/proto/proto-modules/proto-modules-permission/src/main/resources/views/department/update_node.jsp
+END
+manage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/39/trunk/proto/proto-modules/proto-modules-permission/src/main/resources/views/department/manage.jsp
+END
+add_root.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/39/trunk/proto/proto-modules/proto-modules-permission/src/main/resources/views/department/add_root.jsp
+END
+add_child.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/39/trunk/proto/proto-modules/proto-modules-permission/src/main/resources/views/department/add_child.jsp
+END

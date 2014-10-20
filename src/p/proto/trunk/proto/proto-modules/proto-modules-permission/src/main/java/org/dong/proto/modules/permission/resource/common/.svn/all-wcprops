@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/!svn/ver/45/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/resource/common
+END
+CommonResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/!svn/ver/42/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/resource/common/CommonResource.java
+END
+CommonResourceService.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/!svn/ver/25/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/resource/common/CommonResourceService.java
+END
+CommonResourceServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/!svn/ver/39/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/resource/common/CommonResourceServiceImpl.java
+END
+CommonResourceController.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/!svn/ver/45/trunk/proto/proto-modules/proto-modules-permission/src/main/java/org/dong/proto/modules/permission/resource/common/CommonResourceController.java
+END
